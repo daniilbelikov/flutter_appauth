@@ -24,6 +24,10 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 30
 
+    if (project.android.hasProperty("namespace")) {
+        namespace 'io.crossingthestreams.flutterappauth'
+    }
+
     defaultConfig {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
